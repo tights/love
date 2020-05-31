@@ -1,5 +1,4 @@
 const { Client, Collection } = require('discord.js');
-const Utils = require('../utils');
 const fse = require('fs-extra');
 const path = require('path');
 
@@ -9,8 +8,7 @@ module.exports = class extends Client {
 
         this.token = config.token;
         this.prefix = config.prefix;
-        this.utils = Utils;
-
+        
         this.commands = new Collection();
     }
 

@@ -1,9 +1,10 @@
+const { capitilize, repeat } = require('../utils');
 const { MessageEmbed } = require('discord.js');
 
 module.exports = class {
     constructor(client, options = {}) {
-        this.capitilize = client.utils.capitilize;
-        this.repeat = client.utils.repeat;
+        this.capitilize = capitilize;
+        this.repeat = repeat
         this.Embed = MessageEmbed;
         this.client = client;
         this.statusReset = options.statusReset || false;
